@@ -57,10 +57,12 @@ tasks:
   - action: connect_database
   - action: query_database
     file: ./tmp/qbcore/qbcore.sql
+
   - action: query_database
-    file: ./tmp/ox/ox_doorlock.sql
+    file: ./tmp/ox_doorlock.sql
+
   - action: query_database
-    file: ./tmp/ox/ox_inventory.sql
+    file: ./tmp/ox_inventory.sql
 
   # STANDALONE
   - action: download_github
