@@ -57,12 +57,14 @@ tasks:
   - action: connect_database
   - action: query_database
     file: ./tmp/qbcore/qbcore.sql
-
+  
+  # OX DOORLOCK
   - action: query_database
-    file: ./tmp/ox_doorlock.sql
+    file: ./tmp/qbcore/ox_doorlock.sql
 
+  # OX INVENTORY
   - action: query_database
-    file: ./tmp/ox_inventory.sql
+    file: ./tmp/qbcore/ox_inventory.sql
 
   # STANDALONE
   - action: download_github
@@ -444,7 +446,7 @@ tasks:
   - action: unzip
     dest: ./resources/[scripts]/[ox]
     src: ./tmp/files/ox_doorlock.zip
-
+    
   - action: waste_time  # ADD THIS
     seconds: 5
 
