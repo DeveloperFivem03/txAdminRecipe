@@ -11,13 +11,11 @@ description: An advanced FiveM RP framework including jobs, gangs, housing & mor
 # - QB-INVENTORY
 # - QB-TARGET
 # - QB-DOORLOCK
-# - QB-MENU
-# - QB-INPUT
 # - QB-SHOPS
 # - QB-WEAPONS
 # - QB-CRAFTING
 # - PROGRESSBAR
-# - MENUV
+
 # ================================================================
 
 # ===============================================================
@@ -95,6 +93,11 @@ tasks:
     dest: ./resources/[standalone]/screenshot-basic
     ref: master
     src: https://github.com/citizenfx/screenshot-basic
+
+  - action: download_github
+    dest: ./resources/[standalone]/progressbar
+    ref: main
+    src: https://github.com/qbcore-framework/progressbar
 
   - action: download_github
     dest: ./resources/[standalone]/interact-sound
@@ -400,9 +403,19 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-interior
 
+  - action: download_github
+    dest: ./resources/[qb]/qb-menu
+    ref: main
+    src: https://github.com/qbcore-framework/qb-menu
+
   - action: waste_time # PREVENT GITHUB THROTTLING
     seconds: 10
 
+  - action: download_github
+    dest: ./resources/[qb]/qb-input
+    ref: main
+    src: https://github.com/qbcore-framework/qb-input
+    
   - action: download_github
     dest: ./resources/[qb]/qb-loading
     ref: main
